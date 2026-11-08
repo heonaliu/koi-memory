@@ -3,10 +3,26 @@
   --secondary-color: #78ab99;
   --background-color: #cfdfda;
   --accent-color: #ce5a45;
+  --text: #1f3a3a;
+  --button-color: #dfe5dd;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Rubik", "sans-serif";
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text);
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  max-width: 600px;
+  width: 100%
 }

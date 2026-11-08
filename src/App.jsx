@@ -1,5 +1,6 @@
 import { useState } from "react";
 import "./App.css";
+import Card from "./components/Card"
 
 const cardValues = [
   "🐟",
@@ -32,9 +33,9 @@ function App() {
 
   return (
     <div className="app">
-      <div>
+      <div className="cards-grid">
         {cards.map((card) => (
-          <div>{card}</div>
+          <Card card={card} />
         ))}
       </div>
     </div>
