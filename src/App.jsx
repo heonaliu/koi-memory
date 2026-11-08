@@ -89,11 +89,25 @@ function App() {
                 : c,
             ),
           );
-          setIsLocked(false);
+          setScore((prev) => prev + 1);
           setFlippedCards([]);
           setIsLocked(false);
-        });
+        }, 500);
+      } else {
+        setTimeout(() => {
+          const flippedBackCards = newCards.map((c) => {
+            if (c.id === firstCard.id || c.id === card.id) {
+              return { ...c, isFlipped: false };
+            } else {
+              return c;
+            }
+          });
+          setCards(flippedBackCards);
+          setFlippedCards([]);
+          setIsLocked(false);
+        }, 1000);
       }
+      setMoves((prev) => prev + 1);
     }
   };
 
