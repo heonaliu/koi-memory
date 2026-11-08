@@ -1,12 +1,12 @@
 export default function Card(props) {
-  const { card, handleCardClick } = props;
+  const { card, onClick } = props;
   return (
     <div
       className={`card ${card.isFlipped ? "flipped" : ""} ${card.isMatched ? "matched" : ""}`}
-      onClick={() => handleCardClick(card)}
+      onClick={() => onClick(card)}
     >
-      <div className="card-back">?</div>
-      <div className="card-front">{card.value}</div>
+      <div className="card-front">?</div>
+      <div className="card-back">{card.value}</div>
     </div>
   );
 }

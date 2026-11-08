@@ -78,6 +78,8 @@ function App() {
     if (flippedCards.length === 1) {
       setIsLocked(true);
       const firstCard = cards[flippedCards[0]];
+
+      //if the cards match then set the isMatched to true!
       if (firstCard.value === card.value) {
         setTimeout(() => {
           setMatchedCards((prev) => [...prev, firstCard.id, card.id]);
@@ -89,6 +91,7 @@ function App() {
                 : c,
             ),
           );
+          //adjust the score and reset flipped array
           setScore((prev) => prev + 1);
           setFlippedCards([]);
           setIsLocked(false);
@@ -119,7 +122,7 @@ function App() {
     <div className="app">
       <div className="cards-grid">
         {cards.map((card) => (
-          <Card handleCardClick={handleCardClick} key={card.id} card={card} />
+          <Card onClick={handleCardClick} key={card.id} card={card} />
         ))}
       </div>
     </div>

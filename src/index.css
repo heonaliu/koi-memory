@@ -74,3 +74,19 @@ body {
   font-size: 4rem;
   z-index: 1;
 }
+
+.card.flipped .card-front {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card.flipped .card-back {
+  opacity: 1;
+  pointer-events: none;
+}
+
+.card.matched {}
+
+.card.matched .card-back {}
+
+
