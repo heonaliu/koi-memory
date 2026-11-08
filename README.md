@@ -9,7 +9,8 @@
 ## Purpose of Building This:
 - I built a similar project at the beginning of the year when I was still building my React skills. I wanted to see how much I could build on my own now by recreating it and trying to rely less on it.
 
-## Challenges I Faced
+## Challenges I Faced:
+- When trying to iterate through the emojis and show the grid, I ran into an error where the icons weren't rendering. That was because I needed to not only pass the card but also a unique identifier.
 
 ## Things I Learned:
 - using "display: grid" to turn the memory game emotes into grids.

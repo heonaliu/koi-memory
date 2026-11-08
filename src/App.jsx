@@ -27,7 +27,7 @@ function App() {
   const [matchedCards, setMatchedCards] = useState([]);
   const [moves, setMoves] = useState(0);
   const [score, setScore] = useState(0);
-   //locked is only for the card that has already been flipped
+  //locked is only for the card that has already been flipped
   const [isLocked, setIsLocked] = useState(false);
 
   const shuffleCards = (array) => {
@@ -52,7 +52,7 @@ function App() {
       isMatched: false,
     }));
     setCards(finalCards);
-    setMoves(0)
+    setMoves(0);
     setScore(0);
     setMatchedCards([]);
     setFlippedCards([]);
@@ -67,7 +67,7 @@ function App() {
     <div className="app">
       <div className="cards-grid">
         {cards.map((card) => (
-          <Card card={card} />
+          <Card key={card.id} card={card} />
         ))}
       </div>
     </div>
