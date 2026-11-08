@@ -59,6 +59,44 @@ function App() {
     setIsLocked(false);
   };
 
+  const handleCardClick = (card) => {
+    if (card.isFlipped || isLocked || card.isMatched) return;
+
+    const newCards = cards.map((c) => {
+      if (c.id === card.id) {
+        return { ...c, isFlipped: true };
+      } else {
+        return c;
+      }
+    });
+
+    setCards(newCards);
+    // goes through all the flipped cards and adds the current card to the list
+    setFlippedCards([...flippedCards, card.id]);
+
+    // if there is already one card flipped
+    if (flippedCards.length === 1) {
+      setIsLocked(true);
+      const firstCard = cards[flippedCards[0]];
+      if (firstCard.value === card.value) {
+        setTimeout(() => {
+          setMatchedCards((prev) => [...prev, firstCard.id, card.id]);
+
+          setCards((prev) =>
+            prev.map((c) =>
+              c.id === firstCard.id || c.id === card.id
+                ? { ...c, isMatched: true } //set the matched value to be true
+                : c,
+            ),
+          );
+          setIsLocked(false);
+          setFlippedCards([]);
+          setIsLocked(false);
+        });
+      }
+    }
+  };
+
   useEffect(() => {
     startGame();
   }, []);
@@ -67,7 +105,7 @@ function App() {
     <div className="app">
       <div className="cards-grid">
         {cards.map((card) => (
-          <Card key={card.id} card={card} />
+          <Card handleCardClick={handleCardClick} key={card.id} card={card} />
         ))}
       </div>
     </div>

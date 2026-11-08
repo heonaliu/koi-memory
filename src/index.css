@@ -31,7 +31,7 @@ body {
   grid-template-columns: repeat(4, 1fr);
   gap: 15px;
   max-width: 600px;
-  width: 100%
+  width: 100%;
 }
 
 .card {
@@ -56,7 +56,21 @@ body {
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: opacity 0.3s, transform 0.3s;
+  transition:
+    opacity 0.3s,
+    transform 0.3s;
   border-radius: 15px;
   background-color: var(--button-color);
+}
+
+.card-front {
+  font-weight: bold;
+  font-size: 3rem;
+  z-index: 2;
+}
+
+.card-back {
+  background: #fff;
+  font-size: 4rem;
+  z-index: 1;
 }

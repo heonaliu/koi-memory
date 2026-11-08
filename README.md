@@ -17,5 +17,6 @@
 - 1fr represents 1 fractional units
 - Justify content center controls alignment along the main axis in a row (left-to-right) while align items aligns items along the cross axis (top to bottom) when you change the flex direction. Justify content and align items swap axis.
 - transform-style: preserve 3d means that the child should be rendered in a 3d space vs 2d
+- setTimeout -- another ReactJS hook I dono't usually work with. It's purpose is the capture the value of the component state at the moment the timer was initated. If the state changes while the timer is ticking -- the timeout function won't see the update
 ## Things I'm Proud Of:
 - Working with passing props back and forth between components.
