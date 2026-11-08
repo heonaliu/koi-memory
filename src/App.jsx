@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Card from "./components/Card";
+import Winning from "./components/Winning";
+import Header from "./components/Header";
 
 const cardValues = [
   "🐟",
@@ -118,8 +120,12 @@ function App() {
     startGame();
   }, []);
 
+  const isGameComplete = matchedCards.length === cardValues.length;
+
   return (
     <div className="app">
+      <Header />
+      {isGameComplete && <Winning />}
       <div className="cards-grid">
         {cards.map((card) => (
           <Card onClick={handleCardClick} key={card.id} card={card} />
