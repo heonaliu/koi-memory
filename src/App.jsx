@@ -125,7 +125,7 @@ function App() {
   return (
     <div className="app">
       <Header score={score} moves={moves} onReset={startGame}/>
-      {isGameComplete && <Winning />}
+      {isGameComplete && <Winning restart={startGame}/>}
       <div className="cards-grid">
         {cards.map((card) => (
           <Card onClick={handleCardClick} key={card.id} card={card} />
