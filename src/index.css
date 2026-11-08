@@ -14,6 +14,13 @@
   font-family: "Rubik", "sans-serif";
 }
 
+.app {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
 body {
   background-color: var(--background-color);
   color: var(--text);
@@ -25,4 +32,11 @@ body {
   gap: 15px;
   max-width: 600px;
   width: 100%
+}
+
+.card {
+  display: flex;
+  /* puts the content to the center */
+  justify-content: center;
+  align-items: center;
 }
