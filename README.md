@@ -23,3 +23,4 @@
 ## Things I'm Proud Of:
 - Working with passing props back and forth between components.
 - I also enjoyed customizing the components and becoming increasingly familiar with css
+- proud of creating the artwork and drawings. I've become more familiar with flex in this project and positioning things after inserting the images into the project
