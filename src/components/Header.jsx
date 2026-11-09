@@ -1,7 +1,9 @@
+import title from "../assets/title.png";
+
 export default function Header({ score, moves, onReset }) {
   return (
     <div className="header">
-      <h1>Koi Memory Game</h1>
+      <img src={title} alt="Koi Memory Game" />
       <div className="stats">
         <span>Score: {score}</span>
         <span>Moves: {moves}</span>

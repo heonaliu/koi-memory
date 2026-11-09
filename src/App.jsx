@@ -4,23 +4,32 @@ import Card from "./components/Card";
 import Winning from "./components/Winning";
 import Header from "./components/Header";
 
+import koi1 from "./assets/koi1.png";
+import koi2 from "./assets/koi2.png";
+import koi3 from "./assets/koi3.png";
+import koi4 from "./assets/koi4.png";
+import koi5 from "./assets/koi5.png";
+import fu from "./assets/fu.png";
+import flower from "./assets/flower.png";
+import bubble from "./assets/bubble.png";
+
 const cardValues = [
-  "🐟",
-  "🍤",
-  "🐙",
-  "🐬",
-  "🐳",
-  "🦭",
-  "🐠",
-  "🪼",
-  "🐟",
-  "🍤",
-  "🐙",
-  "🐬",
-  "🐳",
-  "🦭",
-  "🐠",
-  "🪼",
+  koi1,
+  koi2,
+  koi3,
+  koi4,
+  koi5,
+  fu,
+  flower,
+  bubble,
+  koi1,
+  koi2,
+  koi3,
+  koi4,
+  koi5,
+  fu,
+  flower,
+  bubble,
 ];
 
 function App() {
