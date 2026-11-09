@@ -1,4 +1,5 @@
 # Koi Memory Game
+![preview](src/assets/preview.png)
 
 ## Live Link:
 - https://koi-memory.vercel.app/
